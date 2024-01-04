@@ -1,38 +1,591 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,900&display=swap");
+
+/* 
+font-family: 'Fredoka One', cursive;
+font-family: 'Poppins', sans-serif; */
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  overflow-x: hidden;
+  overflow: initial;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body {
+  object-fit: fill;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.kontenKomponen {
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.banner{
+  height:100vh;
+  background-position: center center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url('https://raw.githubusercontent.com/Shafira-van/file/main/AntiBully/img/beranda.png');
+}
+
+/* home */
+
+#home {
+  position: relative;
+  padding-bottom: 4vw;
+}
+
+#home img {
+  width: 100%;
+  opacity: 0.7;
+}
+
+.banner-content h1{
+  font-size: 60px;
+}
+
+.section-psikolog img{
+  width: 80%;
+  height: 80%;
+}
+
+.section-psikolog button{
+  background-color: #0C2D48;
+  color: aliceblue;
+}
+
+.section-psikolog button:hover{
+  background-color: #145DA0;
+  color: aliceblue;
+}
+
+.section-card button:hover{
+  background-color: #145DA0;
+  color: aliceblue;
+}
+
+.section-card button{
+  background-color: #0C2D48;
+  color: aliceblue;
+}
+
+.section-psikolog{
+  background: linear-gradient(180deg, #8ea5e0 0%, rgba(211, 217, 233, 0) 65.6%);
+}
+
+.section-card{
+  background: linear-gradient(180deg, rgba(211, 217, 233, 0) 0%, #8ea5e0 65.6%);
+}
+
+.section-card h3{
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.section-card p{
+  font-size: 18px;
+  font-weight: 200;
+}
+
+
+
+
+#home .row {
+  width: 100%;
+  margin: 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+#home .container .col-5 {
+  width: 44%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  border: 2px solid #1366c3;
+  margin: 0 1.6vw;
+  padding: 1vw 2vw;
+  border-radius: 1vw;
+}
+
+#home .container h3 {
+  font-size: 2vw;
+  letter-spacing: 0.2vw;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+#home .container p {
+  font-size: 1.2vw;
+  letter-spacing: 0.2vw;
+  /* font-weight: 400; */
+}
+
+#home .container a {
+  align-self: center;
+}
+
+#home .container button {
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.2vw;
+  font-weight: 400;
+  background-color: #1366C3;
+  border-radius: 0;
+  border-color: #1366C3;
+}
+
+#home .container button:hover {
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.2vw;
+  font-weight: 400;
+  color: #1366C3;
+  background-color: white;
+  border-radius: 0;
+  border-color: #1366C3;
+}
+
+/* artikel */
+
+.artikel .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 4vw;
+
+}
+
+.artikel .container .row .col {
+  margin: 1vw 0vw;
+}
+
+.artikel .container .row a {
+  margin: 0;
+  padding: 0;
+  width: 32vw;
+  height: 26vw;
+  margin: 1vw 1vw;
+}
+
+.artikel .container .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.artikel .container .row .col button {
+  padding: 0;
+  background-image: linear-gradient(#83b8f5, black);
+  position: relative;
+  border: #1366c3 solid 0;
+  display: flex;
+  justify-content: center;
+}
+
+.artikel .container .row .col img {
+  width: 32vw;
+  height: 26vw;
+  padding: 0;
+  margin: 0;
+  object-fit: cover;
+  opacity: 0.3;
+
+}
+
+.artikel .container .row .col img:hover {
+  opacity: 0.2;
+
+}
+
+.artikel .container .row .col p {
+  width: fit-content;
+  font-size: 2vw;
   color: white;
+  font-weight: 600;
+  opacity: 1;
+  position: absolute;
+  Z-index: 1;
+  bottom: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.artikel .container .baris2 .col {
+  /* display: flex;
+  width: 20vw; */
+  margin: 1.2vw 0vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.artikel .container .baris2 a {
+  display: flex;
+  width: 66vw;
+}
+
+.artikel .container .baris2 .col button {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background-color: aliceblue;
+  position: relative;
+  border: #1366c3 solid 1px;
+  width: 66vw;
+}
+
+.artikel .container .baris2 .col button:hover {
+  background-color: rgb(222, 235, 246);
+  opacity: 0.9;
+}
+
+.artikel .container .baris2 .col img {
+  width: 26vw;
+  height: 15vw;
+  opacity: 1;
+  border: 0px black solid;
+}
+
+.artikel .container .baris2 .col p {
+  margin: 0 2vw;
+  color: black;
+  font-weight: 600;
+  font-size: 2vw;
+}
+
+/* detail artikel */
+.detailArtikel {
+  width: 80vw;
+  margin: 2vw 10vw;
+  /* border: 1px solid black; */
+}
+
+.detailArtikel .judulArtikel {
+  display: flex;
+  align-items: center;
+  margin-left: 0vw;
+}
+
+.detailArtikel .judulArtikel img {
+  width: 25vw;
+  height: 15vw;
+  margin-right: 2vw;
+  object-fit: cover;
+}
+
+.detailArtikel .judulArtikel h1 {
+  font-size: 3.4vw;
+  text-align: left;
+}
+
+.detailArtikel p {
+  margin-top: 2vw;
+  font-size: 1.6vw;
+  text-align: justify;
+}
+
+
+.artikelForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2vw 0vw;
+
+}
+
+.artikelForm label {
+  margin-top: 2vw;
+}
+
+.artikelForm .judul {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 12vw */
+  font-size: 2vw;
+}
+
+.artikelForm .judul input {
+  width: 80vw;
+  padding: 0.4vw 1vw;
+  font-size: 1.6vw;
+  border: rgb(151, 149, 149) 1px solid;
+}
+
+.artikelForm .isi {
+  font-size: 2vw;
+}
+
+
+.artikelForm .cover {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 2vw;
+}
+
+.artikelForm .cover input {
+  width: 80vw;
+  font-size: 1.6vw;
+  border: rgb(151, 149, 149) 1px solid;
+}
+
+.artikelForm button {
+  height: 4vw;
+  align-self: center;
+  margin-top: 2vw;
+  padding: 0 1vw;
+  width: 18vw;
+  font-weight: 600;
+  font-size: 1.6vw;
+  background-color: #1366c3;
+  color: white;
+  border: 0;
+  border-radius: 0.4vw;
+}
+
+
+.ck.ck-editor {
+  width: 80vw;
+  font-size: 1.4vw;
+}
+
+.ck.ck-toolbar {
+  font-size: 2vw;
+}
+
+.ck.ck-toolbar.ck-toolbar_grouping>.ck-toolbar__items {
+  font-size: 1.4vw;
+}
+
+
+/* diskusi */
+.diskusi {
+  width: 80vw;
+  margin: 2vw 10vw;
+}
+
+/* faq */
+.faq {
+  width: 80vw;
+  margin: 4vw 10vw;
+}
+
+.faq h1 {
+  text-align: center;
+  font-size: 6vw;
+  font-weight: bolder;
+}
+
+.faq p {
+  text-align: center;
+  font-size: 2.2vw;
+  margin-bottom: 2vw;
+  font-weight: 400;
+}
+
+.faq .accordion button {
+  font-weight: 600;
+}
+
+/* footer */
+.footer {
+  padding: 1vw 2vw 1vw 2vw;
+  background-color: #1366c3;
+  opacity: 0.8;
+  color: white;
+  position: relative;
+  margin-top: auto;
+  padding-bottom: 2vw;
+}
+
+.footer .logoFooter {
+  display: flex;
+  align-items: center;
+}
+
+.footer .logoFooter img {
+  width: 4vw;
+  margin-right: 1vw;
+}
+
+.footer .logoFooter h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+
+.footer .textFooter h2 {
+  font-size: 1.2vw;
+  font-weight: 400;
+  letter-spacing: 0.2vw;
+}
+
+
+.footer #col2 h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.footer .fiturFooter {
+  display: flex;
+}
+
+
+.footer .fiturFooter ul li {
+  padding: 0.4vw;
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+
+
+.footer #col3 h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.footer #col3 ul li {
+  display: flex;
+  align-items: center;
+}
+
+.footer #col3 ul li h2 {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 1vw;
+}
+
+.footer #col3 ul li img {
+  width: 3vw;
+  height: 3vw;
+}
+
+@media only screen and (max-width: 600px) {
+
+  #home .header h1{
+    font-size: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+
+  /* artikel  */
+
+  .artikel .container .row .col p {
+    font-size: 2.4vw;
+  }
+
+  .artikel .container .baris2 .col p {
+    font-size: 2.4vw;
+  }
+
+  .detailArtikel p {
+    font-size: 2.4vw;
+  }
+
+  /* faq */
+  .faq h1 {
+    font-size: 10vw;
+
+  }
+
+  .faq p {
+    font-size: 3vw;
+
   }
 }
+
+@media screen and (max-width: 790px) and (min-width: 200px) {
+
+  .section-card button{
+    font-size: 10px;
+  }
+
+  .section-psikolog button{
+    font-size: 10px;
+  }
+
+
+  .section-card h3{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .section-card p{
+    font-size: 10px;
+    font-weight: 400;
+  }
+  .banner-content h1{
+    font-size: 40px;
+  }
+
+  .banner-content h2{
+    font-size: 28px;
+  }
+
+  .banner-content p{
+    font-size: 13px;
+  }
+
+
+  #home .kontenHome button {
+    font-size: 8px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: 400;
+    background-color: #1366C3;
+    border-radius: 0;
+    border-color: #1366C3;
+  }
+
+  #home .container button {
+    font-size: 7px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: 400;
+    background-color: #1366C3;
+    border-radius: 0;
+    border-color: #1366C3;
+    color: white !important;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #home .container button:hover {
+    font-size: 7px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: 400;
+    color: #1366C3;
+    background-color: white;
+    border-radius: 0;
+    border-color: #1366C3;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .footer .textFooter h2 {
+    font-size: 1.5vw;
+    font-weight: 400;
+    letter-spacing: 0.2vw;
+  }
+
+  .footer .logoFooter h1 {
+    font-size: 2.5vw;
+    font-weight: 700;
+  }
+
+  .footer #col2 h1 {
+    font-size: 2.5vw;
+    font-weight: 700;
+  }
+
+  
+}
+
