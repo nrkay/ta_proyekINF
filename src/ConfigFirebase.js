@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import {getAuth} from 'firebase/auth'
+import {getStorage} from 'firebase/storage'
 import {
     collection,
     getFirestore,
@@ -27,3 +28,6 @@ const app = initializeApp(firebaseConfig);
 
 // Initialize Firebase Authentication and get a reference to the service
 export const auth = getAuth(app);
+export const db = getFirestore()
+export const colArticle = collection(db, 'articles')
+export const storage = getStorage()

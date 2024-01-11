@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { signInWithEmailAndPassword } from 'firebase/auth'
 import pic from '../Asset/Login/picture.png'
 import logo from '../Asset/Navbar/LOGO.gif'
 import '../StyleSheet/Login.css'
+import { auth } from '../ConfigFirebase'
 import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
@@ -11,7 +13,27 @@ function Login() {
 
     const hanleSubmit = (e) => {
         e.preventDefault();
-        navigate('/home');
+        signInWithEmailAndPassword(auth, username, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                navigate('/home');
+                alert("Login Successfuly");
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                const errorCode = error.code;
+                if (errorCode === "auth/invalid-credential") {
+                    alert("Invalid username and password");
+                } else if (errorCode === "auth/user-not-found") {
+                    alert("User not found");
+                } else if (errorCode === "auth/wrong-password") {
+                    alert("Wrong password");
+                } else {
+                    alert(`Error: ${errorCode}`);
+                }
+
+            });
+
     }
     return (
         <>
